@@ -5,5 +5,5 @@ then
   rm -f *.vxt
 fi
 files=$(python sldz.py $1)
-vim +"nnoremap ] :bnext<cr>" +"nnoremap [ :bprev<cr>" +"set laststatus=0" $files
+vim +"nnoremap Q :q!<cr>" +"nnoremap ] :bnext<cr>" +"nnoremap [ :bprev<cr>" +"set laststatus=0" $files
 rm *.vxt
