@@ -8,4 +8,28 @@
     - sldz, cheesy way of saying slides
 
 Props
-  - @jaseemabid for his flash talk at Rootconf2014 where he used slides with emacs, Cool!
+- @jaseemabid for his flash talk at Rootconf2014 where he used slides with emacs, Cool!
+
+Motivation
+- Wanted to build out something like what @jaseemabid used within a few hrs before the flash talks.
+- Wasn't able to present :(
+
+Usage
+- Write your slides in a single file (say foo.sldz)
+- Each slide is seperated from the other by "==="
+    
+    [foo.sldz]
+
+    Slide1
+    ===
+    Slide2
+    ===
+    Slide3
+
+- $ ./sldz foo.sldz
+- This puts you inside vim with 2 shortcuts
+  - ] moves to the next slide
+  - [ moves to the previous slide
+  - Q quits 
+- Happiness!
+
