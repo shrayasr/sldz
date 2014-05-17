@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [ -f 1.vxt ] 
+then
+  rm -f *.vxt
+fi
+files=$(python sldz.py $1)
+vim +"nnoremap ] :bnext<cr>" +"nnoremap [ :bprev<cr>" +"set laststatus=0" $files
+rm *.vxt
