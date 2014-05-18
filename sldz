@@ -1,9 +1,0 @@
-#!/bin/bash
-
-if [ -f 1.vxt ] 
-then
-  rm -f *.vxt
-fi
-files=$(python sldz.py $1)
-vim +"set statusline=slide\ %n\ of\ %{bufnr('$')}" +"nnoremap Q :q!<cr>" +"nnoremap ] :bnext<cr>" +"nnoremap [ :bprev<cr>" $files
-rm *.vxt
