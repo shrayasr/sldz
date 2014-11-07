@@ -1,8 +1,14 @@
-echo "Hello!"
+echo "Sldz loaded"
 
 command! Sldz call s:Sldz()
 
 function! s:Sldz()
+
+  set rnu!
+  set statusline=
+  set laststatus=0
+  set nocursorline
+  set colorcolumn=
 
   let s:filename=expand("%:p")
 
