@@ -9,6 +9,9 @@ function! s:Sldz()
   set laststatus=0
   set nocursorline
   set colorcolumn=
+  set nocursorcolumn
+  set noruler
+  set buftype=nofile
 
   let s:filename=expand("%:p")
 
@@ -23,6 +26,7 @@ function! s:Sldz()
   while s:current_page <= s:max_pages
 
     call append(0, split(s:pages[s:current_page],"\n"))
+    setlocal nomodifiable noruler buftype=nofile laststatus=0
     enew
     let s:current_page += 1
 
